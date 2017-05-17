@@ -39,4 +39,32 @@ KeyUpComponent_v2 = __decorate([
     })
 ], KeyUpComponent_v2);
 exports.KeyUpComponent_v2 = KeyUpComponent_v2;
+var KeyUpComponent_v3 = (function () {
+    function KeyUpComponent_v3() {
+        this.value = '';
+    }
+    KeyUpComponent_v3.prototype.onEnter = function (value) { this.value = value; };
+    return KeyUpComponent_v3;
+}());
+KeyUpComponent_v3 = __decorate([
+    core_1.Component({
+        selector: 'key-up3',
+        template: "\n    <input #box (keyup.enter)=\"onEnter(box.value)\">\n    <p>{{value}}</p>\n  "
+    })
+], KeyUpComponent_v3);
+exports.KeyUpComponent_v3 = KeyUpComponent_v3;
+var KeyUpComponent_v4 = (function () {
+    function KeyUpComponent_v4() {
+        this.value = '';
+    }
+    KeyUpComponent_v4.prototype.update = function (value) { this.value = value; };
+    return KeyUpComponent_v4;
+}());
+KeyUpComponent_v4 = __decorate([
+    core_1.Component({
+        selector: 'key-up4',
+        template: "\n    <input #box\n      (keyup.enter)=\"update(box.value)\"\n      (blur)=\"update(box.value)\">\n\n    <p>{{value}}</p>\n  "
+    })
+], KeyUpComponent_v4);
+exports.KeyUpComponent_v4 = KeyUpComponent_v4;
 //# sourceMappingURL=keyup.components.js.map
